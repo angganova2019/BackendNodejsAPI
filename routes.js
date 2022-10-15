@@ -1,5 +1,4 @@
-const { getAll, getOne, createUser, updateUser, deleteUser } = require("./activity");
-const { getAllTodo, getOneTodo, createTodo, deleteTodo, updateTodo } = require("./todo");
+const { getOneActivity, getAllActivity } = require("./handler");
 
 
 const routes = [
@@ -13,53 +12,53 @@ const routes = [
     {
         method: 'GET',
         path: '/activity-groups',
-        handler: getAll,
+        handler: getAllActivity,
     },
     {
         method: 'GET',
         path: '/activity-groups/{id}',
-        handler: getOne,
+        handler: getOneActivity,
     },
-    {
-        method: 'POST',
-        path: '/activity-groups',
-        handler: createUser,
-    },
-    {
-        method: 'PATCH',
-        path: '/activity-groups/{id}',
-        handler: updateUser,
-    },
-    {
-        method: 'DELETE',
-        path: '/activity-groups/{id}',
-        handler: deleteUser,
-    },
-    {
-        method: 'GET',
-        path: '/todo-items',
-        handler: getAllTodo,
-    },
-    {
-        method: 'GET',
-        path: '/todo-items/{id}',
-        handler: getOneTodo,
-    },
-    {
-        method: 'POST',
-        path: '/todo-items',
-        handler: createTodo,
-    },
-    {
-        method: 'PATCH',
-        path: '/todo-items/{id}',
-        handler: updateTodo,
-    },
-    {
-        method: 'DELETE',
-        path: '/todo-items/{id}',
-        handler: deleteTodo,
-    },
+    // {
+    //     method: 'POST',
+    //     path: '/activity-groups',
+    //     handler: createUser,
+    // },
+    // {
+    //     method: 'PATCH',
+    //     path: '/activity-groups/{id}',
+    //     handler: updateUser,
+    // },
+    // {
+    //     method: 'DELETE',
+    //     path: '/activity-groups/{id}',
+    //     handler: deleteUser,
+    // },
+    // {
+    //     method: 'GET',
+    //     path: '/todo-items',
+    //     handler: getAllTodo,
+    // },
+    // {
+    //     method: 'GET',
+    //     path: '/todo-items/{id}',
+    //     handler: getOneTodo,
+    // },
+    // {
+    //     method: 'POST',
+    //     path: '/todo-items',
+    //     handler: createTodo,
+    // },
+    // {
+    //     method: 'PATCH',
+    //     path: '/todo-items/{id}',
+    //     handler: updateTodo,
+    // },
+    // {
+    //     method: 'DELETE',
+    //     path: '/todo-items/{id}',
+    //     handler: deleteTodo,
+    // },
 ];
 
 module.exports = routes;
