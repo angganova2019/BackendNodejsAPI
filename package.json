@@ -4,13 +4,14 @@
   "description": "Nodejs API with Hapi,Mysql",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "node server.js"
   },
   "author": "Angga N",
   "license": "ISC",
   "dependencies": {
     "@hapi/hapi": "^20.2.2",
     "mysql2": "^2.3.3",
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "sequelize": "^6.25.1"
   }
 }
