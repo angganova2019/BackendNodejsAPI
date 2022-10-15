@@ -1,0 +1,16 @@
+{
+  "name": "backendnodejsapi",
+  "version": "1.0.0",
+  "description": "Nodejs API with Hapi,Mysql",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "author": "Angga N",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/hapi": "^20.2.2",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.20"
+  }
+}
