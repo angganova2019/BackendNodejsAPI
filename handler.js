@@ -1,8 +1,8 @@
 const { db } = require("./config/mysql.config");
 
-
 const getAllActivity = async (request, h) => {
     const [result, fields] = await db.query("SELECT * FROM activities");
+
     return h.response({
         status: 'Success',
         message: 'Success',
@@ -44,6 +44,7 @@ const createActivity = async (request, h) => {
 
     const [resultId, metadata] = await db.query("INSERT INTO activities SET ?", { email, title });
     const [results, fields] = await db.query("SELECT * FROM activities WHERE id = ?", resultId.insertId);
+
     return h.response({
         status: 'Success',
         message: 'Success',
